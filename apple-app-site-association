@@ -1,0 +1,11 @@
+{
+    "applinks": {
+        "apps": [],
+        "details": [
+            {
+                "appID": "APFX6968V2.com.joeisanerd.icatcher",
+                "paths": [ "/itunes/*"]
+            }
+        ]
+    }
+}
