@@ -1,9 +1,14 @@
 {
+    "activitycontinuation": {
+        "apps": [
+            "APFX6968V2.com.joeisanerd.icatcher"
+        ]
+    },
     "applinks": {
         "apps": [],
         "details": [
             {
-                "appIDs": ["APFX6968V2.com.joeisanerd.icatcher"],
+                "appID": "APFX6968V2.com.joeisanerd.icatcher",
                 "components": [
                     {
                        "#": "no_universal_links",
@@ -13,7 +18,11 @@
                     {
                         "/": "/itunes/*",
                         "comment": "Meant to display podcast information using iTunes ID"
-                     }
+                    },
+                    {
+                        "/": "/itunes/?#/*",
+                        "comment": "Meant to display podcast information using iTunes ID"
+                    }
                 ]
             }
         ]
