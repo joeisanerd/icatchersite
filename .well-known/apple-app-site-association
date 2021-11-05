@@ -9,6 +9,7 @@
         "details": [
             {
                 "appID": "APFX6968V2.com.joeisanerd.icatcher",
+                "paths": ["/itunes/*", "NOT /*"],
                 "components": [
                     {
                        "#": "no_universal_links",
