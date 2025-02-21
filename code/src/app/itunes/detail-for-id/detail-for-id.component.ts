@@ -33,10 +33,16 @@ export class DetailForIdComponent {
         
         this.meta.removeTag('name="og:title"');
         this.meta.removeTag('name="og:image"');
+        this.meta.removeTag('name="og:description"');
+        this.meta.removeTag('name="twitter:image"');
+        this.meta.removeTag('name="twitter:card"');
         
         this.meta.addTags([
           { name: 'og:title', content: this.record?.collectionName || '' },
+          { name: 'og:description', content: this.record?.collectionName || '' },
           { name: 'og:image', content: this.record?.artworkUrl100 || '' },
+          { name: 'twitter:card', content: this.record?.artworkUrl600 || '' },
+          { name: 'twitter:image', content: this.record?.artworkUrl100 || '' }
         ], true);
       }
       
