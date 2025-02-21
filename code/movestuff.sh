@@ -1,5 +1,6 @@
-npm run build
+# npm run build
 rm -r ../docs/assets
+rm ../docs/index.html
 rm ../docs/*.js
 rm ../docs/*.css
 cp -r ../dist/browser/assets ../docs/assets
