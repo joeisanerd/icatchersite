@@ -5,6 +5,7 @@ import { ContactMeComponent } from './contact-me/contact-me.component';
 import { FrequentlyAskedQuestionsComponent } from './frequently-asked-questions/frequently-asked-questions.component';
 import { ItunesComponent } from './itunes/itunes.component';
 import { DetailForIdComponent } from './itunes/detail-for-id/detail-for-id.component';
+import { PodcastByIdResolver } from './podcast-by-id-resolver';
 
 export const routes: Routes = [
     {
@@ -32,6 +33,9 @@ export const routes: Routes = [
             },
             {
                 path: ':id',
+                resolve: { 
+                    item: PodcastByIdResolver
+                },
                 component: DetailForIdComponent
             }
         ]

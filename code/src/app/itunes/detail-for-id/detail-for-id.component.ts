@@ -3,7 +3,6 @@ import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ITunesSearchService } from '../services/i-tunes-search.service';
 import { Result } from '../services/itunes-types.model';
-import { RouterLink } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { Meta } from '@angular/platform-browser';
 
@@ -16,34 +15,32 @@ import { Meta } from '@angular/platform-browser';
 })
 export class DetailForIdComponent {
 
-  record: Result | undefined;
+  record: Result | null = null;
 
   constructor(private activeRoute: ActivatedRoute, 
     private router: Router,
     private services: ITunesSearchService,
     private meta: Meta)
   {
-    // This is where you can inject services and initialize variables
-    // that are needed for this component.
-    //console.log('ID:', id);
-    let id = activeRoute.snapshot.paramMap.get('id');
-    console.log('ActivatedRoute:', id);
-
-    if (id) {
-      this.services.itunesFindPodcastById(parseInt(id)).then((result) => {
-        console.log('Search result:', result);
-        if (result.results.length > 0) {
-          this.record = result.results[0];
-
-          this.meta.removeTag('name="og:title"');
-          this.meta.addTags([
-            { name: 'og:title', content: this.record.collectionName },
-            //{ name: '', content: '@alligatorio' },
-            // ...
-          ], true);
-        }
-      });
-    }
+    
+  }
+  
+  ngOnInit() {
+    this.activeRoute.data.subscribe((data) => {
+      console.log('Search result:', data);
+      if (data['item'] && data['item'].results.length > 0) {
+        this.record = data['item'].results[0];
+        
+        this.meta.removeTag('name="og:title"');
+        this.meta.removeTag('name="og:image"');
+        
+        this.meta.addTags([
+          { name: 'og:title', content: this.record?.collectionName || '' },
+          { name: 'og:image', content: this.record?.artworkUrl100 || '' },
+        ], true);
+      }
+      
+    });
   }
 
   navigateToParent() {
