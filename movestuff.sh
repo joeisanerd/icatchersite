@@ -1,4 +1,4 @@
-# npm run build
+npm run build --prefix code
 rm -r docs/assets
 rm docs/index.html
 rm docs/*.js
