@@ -1,0 +1,31 @@
+<h1>
+{{ record?.collectionName }}
+</h1>
+<button (click)="navigateToParent()"  mat-button>Back</button>
+
+<div class="results">
+    <div *ngIf="record" class="podcast-card">
+        <div *ngIf="record.artworkUrl100 != ''" class="card-image">
+        <img [src]="record.artworkUrl100" 
+            alt="{{ record.trackName }}" 
+            class="card-img-top rounded artwork clickable" 
+            />
+        </div>
+        <div class="card-body">
+            <div class="card-title">
+            <h3>{{ record.collectionName }}</h3>
+            <h5 class="secondary-text">{{ record.artistName }}</h5>
+            </div>
+            <div class="card-text">
+            <div class="others">
+                <a href="#"><img style="max-width: 80%;" src="../../assets/Listen_on_iCatcher.png"></a>
+                
+                <!-- <div class="extras">
+                <div>iTunesID: {{ data.collectionId }}</div>
+                <div><a :href="data.feedUrl">Podcast Feed</a></div>
+                </div> -->
+            </div> 
+            </div>  
+        </div>
+    </div>        
+</div>

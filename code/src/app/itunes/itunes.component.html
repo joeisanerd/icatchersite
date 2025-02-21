@@ -1,0 +1,37 @@
+<div class="itunes">
+    <input type="text" placeholder="Search iTunes" 
+            [(ngModel)]="searchTerm" 
+            (change)="onSearch()" />
+    <div *ngIf="results.length > 0">
+        <p>Found {{ results.length }} result(s)</p>
+    </div>
+    <div *ngIf="results.length === 0" class="no-results">
+        <p *ngIf="searchTerm">No results found for '{{ searchTerm }}'</p>
+    </div>
+    <div class="results">
+        <div *ngFor="let item of results" class="podcast-card">
+            <div *ngIf="item.artworkUrl100 != ''" class="card-image">
+            <img [src]="item.artworkUrl100" 
+                  alt="{{ item.trackName }}" 
+                  class="card-img-top rounded artwork clickable" 
+                  [routerLink]="[item.collectionId]" />
+            </div>
+            <div class="card-body">
+                <div class="card-title">
+                  <h3>{{ item.collectionName }}</h3>
+                  <h5 class="secondary-text">{{ item.artistName }}</h5>
+                </div>
+                <div class="card-text">
+                  <div class="others">
+                    <a [routerLink]="[item.collectionId]"><img style="max-width: 80%;" src="../../assets/Listen_on_iCatcher.png"></a>
+                    
+                    <!-- <div class="extras">
+                      <div>iTunesID: {{ data.collectionId }}</div>
+                      <div><a :href="data.feedUrl">Podcast Feed</a></div>
+                    </div> -->
+                  </div> 
+                </div>  
+            </div>
+        </div>        
+    </div>
+</div>

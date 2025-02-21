@@ -1,0 +1,43 @@
+.podcast-card { 
+    max-width: 270px;
+    border: solid 1px silver;
+    border-radius: 8px;
+    padding: 60px;
+  }
+.card-body {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;;
+}
+.card-text {
+    align-self: flex-end;
+}
+.card-image {
+    text-align: center;
+  }
+.card-text h5 {
+    word-wrap: break-word;
+    max-height: 1.2em;
+    overflow: hidden;
+}
+.podcast-card img.artwork {
+    border: solid 1px silver;
+    width: 200px;
+    background-size: cover !important;
+    height: 200px;
+    background-position: center;
+}
+.podcast-card {
+    padding: 8px;
+}
+.others {
+    align-self:flex-end;
+}
+.results {
+    display: flex;
+    justify-content: center;
+    padding-top:24px;
+    flex-wrap: wrap;
+    gap: 16px;
+    background-color: var(--icatcher-dark);
+  }
