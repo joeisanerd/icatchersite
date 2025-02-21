@@ -7,7 +7,7 @@
     "applinks": {
         "details": [
             {
-                "appID": "APFX6968V2.com.joeisanerd.icatcher",
+                "appIDs": ["APFX6968V2.com.joeisanerd.icatcher"],
                 "components": [
                     {
                         "#": "#/itunes/*",
