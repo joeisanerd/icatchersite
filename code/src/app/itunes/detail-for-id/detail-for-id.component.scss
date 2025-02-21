@@ -1,7 +1,7 @@
 .podcast-card { 
-    max-width: 400px;
-    border-radius: 8px;
-    padding: 60px;
+    width: 100vw;
+    //padding: 60px;
+    padding: 8px;
   }
 .card-body {
     display: flex;
@@ -48,4 +48,9 @@
 
   .backButton {
     background-color: white;
+  }
+  .bottom {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
   }
