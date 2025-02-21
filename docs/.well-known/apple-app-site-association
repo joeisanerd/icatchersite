@@ -8,7 +8,7 @@
         "apps": [],
         "details": [
             {
-                "appID": "APFX6968V2.com.joeisanerd.icatcher",
+                "appID": ["APFX6968V2.com.joeisanerd.icatcher"],
                 "paths": ["/itunes/*", "/#/itunes/*", "NOT /*"],
                 "components": [
                     {
@@ -16,7 +16,7 @@
                         "comment": "Meant to display podcast information using iTunes ID"
                     },
                     {
-                        "/": "/#/itunes/*",
+                        "#": "*",
                         "extclude": false,
                         "comment": "Meant to display podcast information using iTunes ID"
                     }
