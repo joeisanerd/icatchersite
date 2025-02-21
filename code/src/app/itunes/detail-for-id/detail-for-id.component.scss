@@ -1,19 +1,22 @@
 .podcast-card { 
-    max-width: 270px;
-    border: solid 1px silver;
+    max-width: 400px;
     border-radius: 8px;
     padding: 60px;
   }
 .card-body {
     display: flex;
     flex-wrap: wrap;
-    text-align: center;;
+    text-align: center;
+    align-items: center;
 }
-.card-text {
+.card-title {
     align-self: flex-end;
+    width: 100vw;
 }
 .card-image {
     text-align: center;
+    padding: 8px;
+    
   }
 .card-text h5 {
     word-wrap: break-word;
@@ -21,10 +24,10 @@
     overflow: hidden;
 }
 .podcast-card img.artwork {
-    border: solid 1px silver;
-    width: 200px;
+    
+    max-height: 400px;
+    max-width: 400px;
     background-size: cover !important;
-    height: 200px;
     background-position: center;
 }
 .podcast-card {
@@ -36,8 +39,9 @@
 .results {
     display: flex;
     justify-content: center;
-    padding-top:24px;
+    align-items: center;
+    //padding-top:24px;
     flex-wrap: wrap;
-    gap: 16px;
     background-color: var(--icatcher-dark);
+    width: 100vw;
   }

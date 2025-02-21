@@ -2,27 +2,28 @@
 
 <div class="results">
     <div *ngIf="record" class="podcast-card">
+        <div class="card-body">
+            <div class="card-title">
+                <h3>{{ record.collectionName }}</h3>
+                <h5 class="secondary-text">{{ record.artistName }}</h5>
+            </div>
+            <div class="card-text">
+                <div class="others">
+                    <a [href]="icatcherLink(record.collectionId)"><img style="max-width: 60%;" src="../../assets/Listen_on_iCatcher.png"></a>
+                </div> 
+            </div>  
+        </div>
         <div *ngIf="record.artworkUrl600 != ''" class="card-image">
-        <img [src]="record.artworkUrl600" 
-            alt="{{ record.trackName }}" 
-            class="card-img-top rounded artwork clickable" 
-            />
+            <img [src]="record.artworkUrl600" 
+                alt="{{ record.trackName }}" 
+                class="card-img-top rounded artwork clickable" 
+                />
         </div>
         <div class="card-body">
             <div class="card-title">
-            <h3>{{ record.collectionName }}</h3>
-            <h5 class="secondary-text">{{ record.artistName }}</h5>
+                <div>iTunesID: {{ record.collectionId }}</div>
+                <div><a [href]="record.feedUrl">Podcast Feed</a></div>
             </div>
-            <div class="card-text">
-            <div class="others">
-                <a [href]="icatcherLink(record.collectionId)"><img style="max-width: 80%;" src="../../assets/Listen_on_iCatcher.png"></a>
-                
-                <!-- <div class="extras">
-                <div>iTunesID: {{ data.collectionId }}</div>
-                <div><a :href="data.feedUrl">Podcast Feed</a></div>
-                </div> -->
-            </div> 
-            </div>  
         </div>
     </div>        
 </div>
