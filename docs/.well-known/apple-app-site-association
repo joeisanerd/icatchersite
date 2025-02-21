@@ -10,11 +10,11 @@
                 "appID": "APFX6968V2.com.joeisanerd.icatcher",
                 "components": [
                     {
-                        "#": "itunes/*",
+                        "#": "#/itunes/*",
                         "comment": "Meant to display podcast information using iTunes ID"
                     },
                     {
-                        "/": "itunes/*",
+                        "/": "/itunes/*",
                         "comment": "Meant to display podcast information using iTunes ID"
                     }
                 ]
