@@ -10,8 +10,8 @@
     </div>
     <div class="results">
         <div *ngFor="let item of results" class="podcast-card">
-            <div *ngIf="item.artworkUrl100 != ''" class="card-image">
-            <img [src]="item.artworkUrl100" 
+            <div *ngIf="item.artworkUrl600 != ''" class="card-image">
+            <img [src]="item.artworkUrl600" 
                   alt="{{ item.trackName }}" 
                   class="card-img-top rounded artwork clickable" 
                   [routerLink]="[item.collectionId]" />
