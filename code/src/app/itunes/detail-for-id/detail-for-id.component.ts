@@ -40,4 +40,8 @@ export class DetailForIdComponent {
   navigateToParent() {
     this.router.navigate(['../'], { relativeTo: this.activeRoute });
   }
+
+  icatcherLink(id:number) {
+    return `icatcher://itunes/${id}`;
+  }
 }
