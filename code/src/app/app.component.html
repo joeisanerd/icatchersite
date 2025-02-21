@@ -1,11 +1,30 @@
 
 
 <mat-toolbar>
-  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+  <button mat-icon-button class="example-icon" [matMenuTriggerFor]="basicMenu" aria-label="Example icon-button with menu icon">
     <mat-icon>menu</mat-icon>
   </button>
 
-  <span routerLink="">Joeisanerd.com</span>
+  <mat-menu #basicMenu="matMenu">
+    <button mat-menu-item routerLink="itunes">
+      <mat-icon>search</mat-icon>
+      <span>Search</span>
+    </button>
+    <button mat-menu-item routerLink="privacy">
+      Privacy
+    </button>
+    <button mat-menu-item routerLink="faq">
+      <mat-icon>announcement</mat-icon>
+      <span>FAQ</span>
+    </button>
+    <button mat-menu-item routerLink="contact">
+      <mat-icon>announcement</mat-icon>
+      <span>Contact</span>
+    </button>
+  </mat-menu>
+
+
+  <span routerLink="">iCatcher.app</span>
   <span class="example-spacer"></span>
   <!-- <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
     <mat-icon>favorite</mat-icon>
@@ -15,15 +34,7 @@
   </button> -->
   <button mat-button routerLink="itunes">
     Search
-  </button>
-  <button mat-button routerLink="privacy">
-    Privacy
-  </button>
-  <button mat-button routerLink="faq">
-    FAQ
-  </button>
-  <button mat-button routerLink="contact">
-    Contact
+    <mat-icon>search</mat-icon>
   </button>
 </mat-toolbar>
 <section class="router-section">

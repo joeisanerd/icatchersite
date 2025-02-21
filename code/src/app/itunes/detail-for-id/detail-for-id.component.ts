@@ -5,6 +5,7 @@ import { ITunesSearchService } from '../services/i-tunes-search.service';
 import { Result } from '../services/itunes-types.model';
 import { RouterLink } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
+import { Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-detail-for-id',
@@ -19,8 +20,9 @@ export class DetailForIdComponent {
 
   constructor(private activeRoute: ActivatedRoute, 
     private router: Router,
-    private services: ITunesSearchService
-  ) {
+    private services: ITunesSearchService,
+    private meta: Meta)
+  {
     // This is where you can inject services and initialize variables
     // that are needed for this component.
     //console.log('ID:', id);
@@ -32,6 +34,13 @@ export class DetailForIdComponent {
         console.log('Search result:', result);
         if (result.results.length > 0) {
           this.record = result.results[0];
+
+          this.meta.removeTag('name="og:title"');
+          this.meta.addTags([
+            { name: 'og:title', content: this.record.collectionName },
+            //{ name: '', content: '@alligatorio' },
+            // ...
+          ], true);
         }
       });
     }
