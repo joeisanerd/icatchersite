@@ -4,8 +4,8 @@ import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.componen
 import { ContactMeComponent } from './contact-me/contact-me.component';
 import { FrequentlyAskedQuestionsComponent } from './frequently-asked-questions/frequently-asked-questions.component';
 import { ItunesComponent } from './itunes/itunes.component';
-import { DetailForIdComponent } from './itunes/detail-for-id/detail-for-id.component';
 import { PodcastByIdResolver } from './podcast-by-id-resolver';
+import { DetailForIdComponent } from './itunes/details/detail-for-id.component';
 
 export const routes: Routes = [
     {

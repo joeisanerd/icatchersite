@@ -6,7 +6,7 @@
   </button>
 
   <mat-menu #basicMenu="matMenu">
-    <button mat-menu-item routerLink="itunes">
+    <button mat-menu-item routerLink="?itunes">
       <mat-icon>search</mat-icon>
       <span>Search</span>
     </button>
@@ -32,7 +32,11 @@
   <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
     <mat-icon>share</mat-icon>
   </button> -->
-  <button mat-button routerLink="itunes">
+  <button mat-button 
+    routerLink="/itunes">
+    <!-- [queryParams]="{uname:'Mohan', age: 30, city:'Varanasi'}"
+  queryParamsHandling="merge" -->
+  
     Search
     <mat-icon>search</mat-icon>
   </button>
