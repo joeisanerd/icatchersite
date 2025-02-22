@@ -5,6 +5,7 @@ import { ITunesSearchService } from '../services/i-tunes-search.service';
 import { Result } from '../services/itunes-types.model';
 import { MatButtonModule } from '@angular/material/button';
 import { Meta } from '@angular/platform-browser';
+import {Title} from "@angular/platform-browser";
 
 @Component({
   selector: 'app-detail-for-id',
@@ -20,7 +21,8 @@ export class DetailForIdComponent {
   constructor(private activeRoute: ActivatedRoute, 
     private router: Router,
     private services: ITunesSearchService,
-    private meta: Meta)
+    private meta: Meta,
+    private title:Title)
   {
     
   }
@@ -29,6 +31,8 @@ export class DetailForIdComponent {
     let item = this.activeRoute.snapshot.data['item'];
     if (item && item.results.length > 0){
         this.record = item.results[0];
+        
+        this.title.setTitle(this.record?.collectionName ?? "iCatcher! Podcast Player");
         
         this.meta.removeTag('name="og:title"');
         this.meta.removeTag('name="og:image"');
