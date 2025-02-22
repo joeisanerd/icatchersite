@@ -47,6 +47,7 @@ export class DetailForIdComponent {
         this.meta.removeTag('name="twitter:player:stream"');
         this.meta.removeTag('name="twitter:player:width"');
         this.meta.removeTag('name="twitter:player:height"');
+        this.meta.removeTag('name="twitter:player"');
         
         this.meta.addTags([
           { name: 'og:title', content: this.record?.collectionName || '' },
@@ -61,6 +62,7 @@ export class DetailForIdComponent {
           { name: 'twitter:app:id:iphone', content: '414419105' },
           { name: 'twitter:app:id:ipad', content: '414419105' },
 
+          { name: 'twitter:player', content: 'https://overcast.fm/podcasts/episode_card/543077665055933?t=0' },
           { name: 'twitter:player:height', content: '58' },
           { name: 'twitter:player:width', content: '290' },
           { name: 'twitter:player:stream', content: 'https://chrt.fm/track/138C95/prfx.byspotify.com/e/play.podtrac.com/npr-500005/ondemand.npr.org/anon.npr-mp3/npr/newscasts/2025/02/22/20250222_newscasts_long_100800.mp3?p=500005&amp;e=nsv2-1740236400000-s1-long&amp;d=280&amp;t=podcast&amp;size=4480567#t=0' },
