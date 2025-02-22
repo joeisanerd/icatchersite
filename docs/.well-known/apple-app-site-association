@@ -17,6 +17,7 @@
                     },
                     {
                         "#": "itunes",
+                        "exclude": false,
                         "comment": "Meant to display podcast information using iTunes ID"
                     },
                     {

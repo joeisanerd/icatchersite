@@ -1,0 +1,19 @@
+
+<div class="content" *ngIf="episode">
+    <div>
+        <h1>{{episode.trackName }}</h1>
+        <h4>{{ record?.collectionName }}</h4>
+
+        <img [src]="episode.artworkUrl600" alt="Episode Artwork" />
+
+        <div>
+            <audio controls>
+                <source [src]="episode.previewUrl" type="audio/mpeg">
+            </audio>
+        </div>
+    </div>
+    <!-- <code>
+    {{ stringify(item) }}
+    </code> -->
+    <br/>
+</div>

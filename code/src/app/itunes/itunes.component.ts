@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ITunesSearchService } from './services/i-tunes-search.service';
-import { Result } from './services/itunes-types.model';
+import { AppleSearchPodcast, AppleSearchPodcastEpisode, AppleSearchResult } from './services/itunes-types.model';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -14,7 +14,7 @@ import { RouterLink } from '@angular/router';
 })
 export class ItunesComponent implements OnInit {
 
-  results: Result[] = []
+  results: (AppleSearchPodcast)[] = []
   searchTerm: string = '';
 
   constructor(private service: ITunesSearchService) {
@@ -26,7 +26,7 @@ export class ItunesComponent implements OnInit {
     }
     if (this.service.response != null){
       console.log('Search result:', this.service.response);
-      this.results = this.service.response?.results ?? [];
+      this.results = (this.service.response?.results ?? []) as AppleSearchPodcast[];
     }
   }
 
@@ -39,7 +39,7 @@ export class ItunesComponent implements OnInit {
     console.log('Search term:', this.searchTerm);
     this.service.search(this.searchTerm).then((result) => {
       console.log('Search result:', result);
-      this.results = result?.results ?? [];
+      this.results = (result?.results ?? []) as AppleSearchPodcast[];
     });
   }
 

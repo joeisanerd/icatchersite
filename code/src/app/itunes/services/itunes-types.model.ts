@@ -1,19 +1,9 @@
 
-export interface ItunesTypes {
+export interface AppleSearchResult {
     resultCount: number,
-    results: Array<Result>
+    results: Array<AppleSearchPodcast|AppleSearchPodcastEpisode>
   }
-//   export interface Result {
-//     collectionName: string,
-//     album: string,
-//     collectionPrice: number,
-//     artworkUrl30: string,
-//     artworkUrl100: string,
-//     artworkUrl600: string,
-//     artistName: string,
-//     collectionId: number
-//   }
-  export interface Result {
+  export interface AppleSearchPodcast {
     wrapperType:            string;
     kind:                   string;
     artistId?:              number;
@@ -48,29 +38,36 @@ export interface ItunesTypes {
     genres:                 string[];
 }
 
-export enum Explicitness {
-    Cleaned = "cleaned",
-    Explicit = "explicit",
-    NotExplicit = "notExplicit",
-}
 
-export enum ContentAdvisoryRating {
-    Clean = "Clean",
-    Explicit = "Explicit",
-}
-
-export enum Country {
-    Usa = "USA",
-}
-
-export enum Currency {
-    Usd = "USD",
-}
-
-export enum Kind {
-    Podcast = "podcast",
-}
-
-export enum WrapperType {
-    Track = "track",
-}
+export interface AppleSearchPodcastEpisode {
+    previewUrl: string;
+    episodeUrl: string;
+    artistIds: any[];
+    artworkUrl600: string;
+    artworkUrl160: string;
+    episodeFileExtension: string;
+    episodeContentType: string;
+    episodeGuid: string;
+    trackId: number;
+    trackName: string;
+    releaseDate: string;
+    shortDescription: string;
+    feedUrl: string;
+    closedCaptioning: string;
+    collectionId: number;
+    collectionName: string;
+    kind: string;
+    wrapperType: string;
+    description: string;
+    country: string;
+    collectionViewUrl: string;
+    trackViewUrl: string;
+    artworkUrl60: string;
+    trackTimeMillis: number;
+    contentAdvisoryRating: string;
+    genres: {
+      name: string;
+      id: string;
+    }[];
+  }
+  
