@@ -56,7 +56,7 @@ export class EpisodeComponent implements OnInit {
           { name: 'og:description', content: this.record?.collectionName || '' },
           { name: 'og:image', content: this.record?.artworkUrl100 || '' },
           { name: 'twitter:card', content: "player" },
-          { name: 'twitter:site', content: "iCatcher.app" },
+          { name: 'twitter:site', content: "@joeisanerd" },
           { name: 'twitter:app:country', content: 'US' },
           { name: 'twitter:app:name:iphone', content: 'iCatcher' },
           { name: 'twitter:app:name:ipad', content: 'iCatcher' },

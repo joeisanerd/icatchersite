@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ApplicationRef, Component, DoBootstrap } from '@angular/core';
 import { RouterModule, RouterOutlet } from '@angular/router';
 import {MatIcon, MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
@@ -19,7 +19,7 @@ import { Meta } from '@angular/platform-browser';
   providers: [
   ]
 })
-export class AppComponent {
+export class AppComponent implements DoBootstrap {
   title = 'icatcher-static';
 
   constructor(private meta:Meta){
@@ -28,5 +28,9 @@ export class AppComponent {
       { name: 'og:type', content: 'podcast' },
       { name: 'og:site_name', content: 'iCatcher' }
     ]);
+  }
+
+  ngDoBootstrap(appRef: ApplicationRef): void {
+    console.log("Bootstrap");
   }
 }
