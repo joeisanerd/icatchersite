@@ -26,10 +26,9 @@ export class DetailForIdComponent {
   }
   
   ngOnInit() {
-    this.activeRoute.data.subscribe((data) => {
-      console.log('Search result:', data);
-      if (data['item'] && data['item'].results.length > 0) {
-        this.record = data['item'].results[0];
+    let item = this.activeRoute.snapshot.data['item'];
+    if (item && item.results.length > 0){
+        this.record = item.results[0];
         
         this.meta.removeTag('name="og:title"');
         this.meta.removeTag('name="og:image"');
@@ -66,12 +65,9 @@ export class DetailForIdComponent {
           { name: 'twitter:player:height', content: '58' },
           { name: 'twitter:player:width', content: '290' },
           { name: 'twitter:player:stream', content: 'https://chrt.fm/track/138C95/prfx.byspotify.com/e/play.podtrac.com/npr-500005/ondemand.npr.org/anon.npr-mp3/npr/newscasts/2025/02/22/20250222_newscasts_long_100800.mp3?p=500005&amp;e=nsv2-1740236400000-s1-long&amp;d=280&amp;t=podcast&amp;size=4480567#t=0' },
-          { name: 'twitter:player:stream:content_type', content: 'audio/mped' }
-                    
-        ], true);
-        
+          { name: 'twitter:player:stream:content_type', content: 'audio/mped' }   
+        ], true); 
       }
-    });
   }
 
   navigateToParent() {
