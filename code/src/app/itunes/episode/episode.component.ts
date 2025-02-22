@@ -73,7 +73,7 @@ export class EpisodeComponent implements OnInit {
         if (this.episode){
           this.meta.addTags([
             { name: 'twitter:image', content: this.episode.artworkUrl600 || '' },
-            //{ name: 'twitter:player', content: 'https://overcast.fm/podcasts/episode_card/543077665055933?t=0' },
+            { name: 'twitter:player', content: `https://icatcher.app/#/episode/${this.record.collectionId}/${this.episode.trackId}` },
             { name: 'twitter:player:height', content: '58' },
             { name: 'twitter:player:width', content: '290' },
             { name: 'twitter:player:stream', content: this.episode.previewUrl ?? ""},
