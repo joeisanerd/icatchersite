@@ -18,6 +18,9 @@
     padding: 8px;
     
   }
+  .card-text {
+    width: 100vw;
+  }
 .card-text h5 {
     word-wrap: break-word;
     max-height: 1.2em;
@@ -42,7 +45,6 @@
     align-items: center;
     //padding-top:24px;
     flex-wrap: wrap;
-    background-color: var(--icatcher-dark);
     width: 100vw;
   }
 

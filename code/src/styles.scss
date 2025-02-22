@@ -1,4 +1,6 @@
-@use 'styles/_bootstrap-custom';
+//@use 'styles/_bootstrap-custom';
+@use '@angular/material' as mat;
+
 
 html, body { height: 100%; }
 body { margin: 0; 
@@ -23,6 +25,27 @@ h1 {
     color: #fff;
 }
 html body {
-    background-color: var(--icatcher-dark);
-    color: var(--icatcher-dark-text);
+    // background-color: var(--icatcher-dark);
+    // color: var(--icatcher-dark-text);
 }
+
+  html {
+    color-scheme: light dark;
+    @include mat.theme((
+      color: (
+        primary: mat.$blue-palette,
+        tertiary: mat.$orange-palette,
+      ),
+      typography: Roboto,
+      density: 0
+    ));
+  }
+
+  body {
+    background-color: var(--mat-sys-background);
+    color: var(--mat-sys-on-background);
+    // border: 1px solid var(--mat-sys-outline-variant);
+    // font: var(--mat-sys-body-large);
+  }
+
+  //"node_modules/bootstrap/dist/css/bootstrap.min.css"

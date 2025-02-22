@@ -1,10 +1,9 @@
 
 
-<mat-toolbar>
+<mat-toolbar class="fixed-toolbar">
   <button mat-icon-button class="example-icon" [matMenuTriggerFor]="basicMenu" aria-label="Example icon-button with menu icon">
     <mat-icon>menu</mat-icon>
   </button>
-
   <mat-menu #basicMenu="matMenu">
     <button mat-menu-item routerLink="?itunes">
       <mat-icon>search</mat-icon>
@@ -22,8 +21,6 @@
       <span>Contact</span>
     </button>
   </mat-menu>
-
-
   <span routerLink="">iCatcher.app</span>
   <span class="example-spacer"></span>
   <!-- <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
