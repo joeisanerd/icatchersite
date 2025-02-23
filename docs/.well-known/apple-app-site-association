@@ -26,6 +26,10 @@
                     {
                         "/": "/itunes/*",
                         "comment": "Meant to display podcast information using iTunes ID"
+                    },
+                    {
+                        "/": "/index#itunes/*",
+                        "comment": "Meant to display podcast information using iTunes ID"
                     }
                 ]
             }
