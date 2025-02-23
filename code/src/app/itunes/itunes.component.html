@@ -1,12 +1,22 @@
+<app-content-card>
 <div class="itunes">
-    <input type="text" placeholder="Search iTunes" 
-            [(ngModel)]="searchTerm" 
-            (change)="onSearch()" />
+    <mat-form-field class="example-form-field" appearance="outline" >
+      <mat-label>Search iTunes</mat-label>
+      <input matInput title="Search field" type="text" 
+            (change)="onSearch()"
+            [formControl]="searchTerm"
+            #searchInput>
+      @if (searchTerm) {
+        <button matSuffix mat-icon-button aria-label="Clear" (click)="clearSearch()">
+          <mat-icon>close</mat-icon>
+        </button>
+      }
+    </mat-form-field>
     <div *ngIf="results.length > 0">
         <p>Found {{ results.length }} result(s)</p>
     </div>
     <div *ngIf="results.length === 0" class="no-results">
-        <p *ngIf="searchTerm">No results found for '{{ searchTerm }}'</p>
+        <p *ngIf="searchTerm">No results found for '{{ searchTerm.value }}'</p>
     </div>
     <div class="results">
         <div *ngFor="let item of results" class="podcast-card">
@@ -35,3 +45,4 @@
         </div>        
     </div>
 </div>
+</app-content-card>

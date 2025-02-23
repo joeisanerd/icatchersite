@@ -6,10 +6,12 @@ import { AppleSearchPodcast } from '../services/itunes-types.model';
 import { MatButtonModule } from '@angular/material/button';
 import { Meta } from '@angular/platform-browser';
 import {Title} from "@angular/platform-browser";
+import { ContactMeComponent } from "../../contact-me/contact-me.component";
+import { ContentCardComponent } from '../../content-card/content-card.component';
 
 @Component({
   selector: 'app-detail-for-id',
-  imports: [CommonModule, MatButtonModule],
+  imports: [CommonModule, MatButtonModule, ContentCardComponent],
   templateUrl: './detail-for-id.component.html',
   styleUrl: './detail-for-id.component.scss',
   standalone: true

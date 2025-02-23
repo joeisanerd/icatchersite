@@ -5,7 +5,8 @@ import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angula
   selector: 'app-content-card',
   imports: [CommonModule],
   templateUrl: './content-card.component.html',
-  styleUrl: './content-card.component.scss'
+  styleUrl: './content-card.component.scss',
+  standalone: true
 })
 export class ContentCardComponent //implements AfterViewInit, OnInit 
 {
