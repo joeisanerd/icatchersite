@@ -1,7 +1,10 @@
 .podcast-card { 
     // width: 100vw;
     //padding: 60px;
-    padding: 8px;
+    // padding: 8px;
+    h2 {
+      margin: 0px;
+    }
   }
 .card-body {
     display: flex;
@@ -29,7 +32,7 @@
 .podcast-card img.artwork {
     
     max-height: 400px;
-    max-width: 400px;
+    max-width: 80%;
     background-size: cover !important;
     background-position: center;
 }
@@ -40,12 +43,9 @@
     align-self:flex-end;
 }
 .results {
-    display: flex;
     justify-content: center;
     align-items: center;
-    //padding-top:24px;
-    flex-wrap: wrap;
-    // width: 100vw;
+    
   }
 
   .backButton {
@@ -54,5 +54,5 @@
   .bottom {
     display: flex;
     justify-content: center;
-    width: 100vw;
+    
   }

@@ -1,9 +1,7 @@
 .content {
     display: flex;
-    width: 100vw;
     justify-content: center;
     text-align: center;
-
 }
 .artwork {
     padding: 8px;
@@ -13,4 +11,7 @@
     max-width: 250px;
     border-radius: 8px;
     margin: 8px;
+}
+h2 {
+    margin: 0px;
 }

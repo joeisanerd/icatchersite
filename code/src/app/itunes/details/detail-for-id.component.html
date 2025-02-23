@@ -1,10 +1,10 @@
 
 <app-content-card>
-<div class="results">
+
     <div *ngIf="record" class="podcast-card">
         <div class="card-body">
             <div class="card-title">
-                <h1>{{ record.collectionName }}</h1>
+                <h2>{{ record.collectionName }}</h2>
                 <h3 class="secondary-text">{{ record.artistName }}</h3>
             </div>
             <div class="card-text">
@@ -28,7 +28,7 @@
             </div>
         </div>
     </div>        
-</div>
+
 <div class="bottom">
     <br/>
     <button (click)="navigateToParent()" class="backButton" mat-stroked-button>Back to search</button>

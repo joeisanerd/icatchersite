@@ -7,3 +7,6 @@ cp -r dist/browser/assets docs/assets
 cp -r dist/browser/*.js docs
 cp -r dist/browser/*.css docs
 cp -r dist/browser/index.html docs
+
+git add .
+git commit -am"."

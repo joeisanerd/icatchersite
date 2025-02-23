@@ -8,7 +8,7 @@ import { mockPodcastWithEpisodesData } from './mock-search-response2.model';
 })
 export class ITunesSearchService {
 
-  useMockData = false;
+  useMockData = true;
   searchTerm = '';
   response:AppleSearchResult|null = null;
   

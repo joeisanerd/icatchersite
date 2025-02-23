@@ -5,10 +5,15 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { AppleSearchResult, AppleSearchPodcast, AppleSearchPodcastEpisode } from '../services/itunes-types.model';
 import { MatButtonModule } from '@angular/material/button';
 import { CommonModule } from '@angular/common';
+import { ContentCardComponent } from "../../content-card/content-card.component";
 
 @Component({
   selector: 'app-episode',
-  imports: [CommonModule, MatButtonModule],
+  imports: [CommonModule
+    , MatButtonModule
+    , ContentCardComponent
+    , ContentCardComponent
+  ],
   templateUrl: './episode.component.html',
   styleUrl: './episode.component.scss'
 })
