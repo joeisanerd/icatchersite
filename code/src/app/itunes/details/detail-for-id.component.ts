@@ -26,7 +26,8 @@ export class DetailForIdComponent {
     private meta: Meta,
     private title:Title)
   {
-    
+    this.title.setTitle("iCatcher! Podcast Player");
+
   }
   
   ngOnInit() {
