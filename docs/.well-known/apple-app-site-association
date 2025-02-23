@@ -8,7 +8,7 @@
         "details": [
             {
                 "appID": "APFX6968V2.com.joeisanerd.icatcher",
-                "paths": ["*"],
+                "appIDs": ["APFX6968V2.com.joeisanerd.icatcher"],
                 "components": [
                     {
                         "#": "no_universal_links",
@@ -16,16 +16,15 @@
                         "comment": "Matches any URL whose fragment equals no_universal_links and instructs the system not to open it as a universal link"
                     },
                     {
-                        "#": "itunes",
-                        "exclude": false,
+                        "#": "/#/itunes/*",
                         "comment": "Meant to display podcast information using iTunes ID"
                     },
                     {
-                        "/": "*",
+                        "#": "/#/episode/*",
                         "comment": "Meant to display podcast information using iTunes ID"
                     },
                     {
-                        "/": "*/itunes/*",
+                        "/": "/itunes/*",
                         "comment": "Meant to display podcast information using iTunes ID"
                     }
                 ]
