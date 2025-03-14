@@ -19,7 +19,7 @@ export class ITunesSearchService {
   {
     this.searchTerm = search;
 
-    if (this.useMockData){
+    if (this.useMockData){  
       this.response = structuredClone(mockData);
       return this.response;
     }
