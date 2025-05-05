@@ -4,7 +4,7 @@
  */
  {
 	"$schema": "node_modules/wrangler/config-schema.json",
-	"name": "cloudflare-test",
+	"name": "icatchersite",
 	"main": "./src/main.ts",
 	"compatibility_date": "2025-05-03",
 	"observability": {
