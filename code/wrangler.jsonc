@@ -9,7 +9,7 @@
 	"compatibility_date": "2025-05-03",
 	"assets": {
 		"binding": "ASSETS",
-		"directory": "./dist/browser"
+		"directory": "../dist/browser"
 	},
 	"observability": {
 		"enabled": true
