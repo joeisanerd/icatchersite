@@ -42,10 +42,6 @@ header {
     display:flex;
     color: #fff;
 }
-html body {
-    // background-color: var(--icatcher-dark);
-    // color: var(--icatcher-dark-text);
-}
 
   html {
     color-scheme: light dark;
@@ -67,3 +63,14 @@ html body {
   }
 
   //"node_modules/bootstrap/dist/css/bootstrap.min.css"
+
+  /* You can add global styles to this file, and also import other style files */
+
+.help-container {
+  width: calc(90vw - 32px);
+  margin: 2rem auto;
+  background: #fff;
+  border-radius: 1.5rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  padding: 2rem 1.5rem;
+}

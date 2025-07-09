@@ -8,15 +8,21 @@ import { PodcastByIdResolver, PodcastWithEpisodesByIdResolver } from './podcast-
 import { DetailForIdComponent } from './itunes/details/detail-for-id.component';
 import { PlayerComponent } from './player/player.component';
 import { EpisodeComponent } from './itunes/episode/episode.component';
+import { AboutComponent } from './about/about.component';
+import { ScreenshotCarouselComponent } from './screenshot-carousel/screenshot-carousel.component';
 
 export const routes: Routes = [
     {
         path: '',
-        component: HomeComponent,
+        component: ScreenshotCarouselComponent,
     },
     {
         path: 'privacy',
         component: PrivacyPolicyComponent
+    },
+    {   
+        path: 'about',
+        component: AboutComponent
     },
     {
         path: 'contact',

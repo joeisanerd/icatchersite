@@ -8,3 +8,217 @@
 .fixed-toolbar {
   position: fixed;
 }
+
+/* --- */
+/* Modern, mobile-friendly iPhone app landing page styles */
+:host {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #305A94 0%, #181C25 100%);
+  color: #222;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+.header {
+  text-align: center;
+  padding: 2rem 1rem 1rem 1rem;
+}
+
+.app-icon {
+  width: 96px;
+  height: 96px;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+  background: #fff;
+  display: inline-block;
+  object-fit: cover;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0.5rem 0 0.25rem 0;
+  color: #fff;
+}
+
+.tagline {
+  font-size: 1.25rem;
+  color: #f3f3f3;
+  margin-bottom: 1.5rem;
+}
+
+.download-btn {
+  display: inline-block;
+  background: #222;
+  color: #fff;
+  font-size: 1.1rem;
+  padding: 0.75rem 2rem;
+  border-radius: 2rem;
+  text-decoration: none;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  transition: background 0.2s;
+}
+.download-btn:hover {
+  background: #444;
+}
+
+.iphone-mockup {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0 1.5rem 0;
+}
+.iphone-img {
+  width: 220px;
+  max-width: 80vw;
+  border-radius: 2.5rem;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  border: 8px solid #fff;
+}
+
+.features {
+  background: rgba(255,255,255,0.92);
+  border-radius: 2rem;
+  margin: 0 1rem 2rem 1rem;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+}
+.features h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #ee0979;
+}
+.features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.features-list li {
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+  padding-left: 1.2em;
+  position: relative;
+}
+.features-list li:before {
+  content: '✓';
+  color: #ff6a00;
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+.footer {
+  text-align: center;
+  color: #fff;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+.social-links a {
+  color: #fff;
+  margin: 0 0.5rem;
+  font-size: 1.3rem;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.social-links a:hover {
+  color: #ff6a00;
+}
+.contact-link {
+  color: #ee0979;
+  text-decoration: underline;
+}
+
+.social-links {
+  margin-top: 0.5rem;
+}
+
+.social-emoji {
+  font-size: 0.7em;
+}
+
+.mat-toolbar {
+  background: #23232b;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+.mat-toolbar.toolbar-flex {
+  display: flex;
+  align-items: center;
+}
+.toolbar-content {
+  display: flex;
+  align-items: center;
+}
+.site-title {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  line-height: 1;
+  transition: text-decoration 0.2s;
+}
+.site-title:hover {
+  text-decoration: underline;
+}
+.spacer {
+  flex: 1 1 auto;
+}
+nav a[mat-button] {
+  color: #fff;
+  font-weight: 500;
+  margin-left: 0.5rem;
+}
+nav a.active {
+  border-bottom: 2px solid #fff;
+}
+
+.app-icon {
+  margin-right: 1rem;
+  height: 1.3rem;
+  width: auto;
+  border-radius: 8px;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+@media (max-width: 600px) {
+  .features {
+    padding: 1.2rem 0.5rem;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  .iphone-img {
+    width: 140px;
+  }
+  nav {
+    display: none !important;
+  }
+  .mat-toolbar .mat-icon-button {
+    display: block !important;
+    margin-left: auto;
+  }
+  
+}
+
+@media (min-width: 601px) {
+  .mat-toolbar .mat-icon-button {
+    display: none !important;
+  }
+  nav {
+    display: flex !important;
+  }
+}
+::ng-deep .mat-mdc-menu-panel {
+  background: unset;
+  background-color: white !important;
+  border-radius: 8px !important;
+}
