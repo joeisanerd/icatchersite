@@ -1,0 +1,15 @@
+<div class="carousel-container" *ngIf="!loading && screenshotUrls.length">
+  <button mat-icon-button (click)="prev()" aria-label="Previous screenshot" class="carousel-button">
+    <mat-icon>chevron_left</mat-icon>
+  </button>
+  <div class="carousel-image-wrapper">
+    <img [src]="screenshotUrls[currentIndex]" alt="App screenshot" class="carousel-image" />
+    <div class="carousel-indicator">
+      {{ currentIndex + 1 }} / {{ screenshotUrls.length }}
+    </div>
+  </div>
+  <button mat-icon-button (click)="next()" aria-label="Next screenshot" class="carousel-button">
+    <mat-icon>chevron_right</mat-icon>
+  </button>
+</div>
+<mat-progress-spinner *ngIf="loading" mode="indeterminate"></mat-progress-spinner>

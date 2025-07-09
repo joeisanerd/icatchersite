@@ -1,0 +1,53 @@
+.carousel-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0;
+  color: white;
+}
+.carousel-image-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.carousel-image {
+  width: 400px;
+  max-height: 900px;
+  border-radius: 10px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18), 0 0 0 6px #222;
+//   border: 8px solid #fff;
+//   background: #fff;
+  object-fit: cover;
+  aspect-ratio: 270/585;
+  transition: box-shadow 0.2s;
+}
+.carousel-indicator {
+  margin-top: 0.5rem;
+  color: #fff;
+  background: #23232b;
+  border-radius: 1rem;
+  padding: 0.2rem 0.8rem;
+  font-size: 1rem;
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0.85;
+}
+.iphone-mockup {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0 1.5rem 0;
+  /* iPhone 15 Pro Max: 159mm x 76.7mm, 2796x1290px, 20px corner radius */
+  min-height: 420px;
+}
+@media (max-width: 600px) {
+  .carousel-image {
+    width: 150px;
+    height: 325px;
+    border-radius: 20px;
+    border-width: 6px;
+  }
+}

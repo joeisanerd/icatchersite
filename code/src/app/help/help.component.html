@@ -1,0 +1,23 @@
+<div class="help-container">
+  <h2 class="no-padding mt-0 mb-0">Help & FAQ</h2>
+  <div class="help-list" *ngIf="!selectedTopic">
+    <ul>
+      <li *ngFor="let topic of topics" [class.selected]="currentShortName === topic.shortName">
+        <a [routerLink]="['/help', topic.shortName]">
+          <strong>{{ topic.title }}</strong>
+          <div class="summary" *ngIf="topic.summary">{{ topic.summary }}</div>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="help-detail" *ngIf="markdown">
+    <a [routerLink]="['/help']" class="back-link">&larr; Back to topics</a>
+    <h3>{{ selectedTopic?.title }}</h3>
+    <markdown [data]="markdown"></markdown>
+  </div>
+  <div class="help-placeholder" *ngIf="!markdown && !loading && !error && !selectedTopic">
+    <em>Select a topic to view details.</em>
+  </div>
+  <div class="help-loading" *ngIf="loading">Loading...</div>
+  <div class="help-error" *ngIf="error">{{ error }}</div>
+</div>
