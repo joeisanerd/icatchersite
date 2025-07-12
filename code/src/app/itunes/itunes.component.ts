@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import { AfterViewInit, ChangeDetectionStrategy, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { ITunesSearchService } from './services/i-tunes-search.service';
 import { AppleSearchPodcast, AppleSearchPodcastEpisode, AppleSearchResult } from './services/itunes-types.model';
@@ -12,13 +12,7 @@ import { ContentCardComponent } from "../content-card/content-card.component";
 
 @Component({
   selector: 'app-itunes',
-  imports: [CommonModule, FormsModule,
-    RouterLink, MatFormFieldModule,
-    MatInputModule,
-    MatIconModule,
-    MatButtonModule,
-    ReactiveFormsModule, ContentCardComponent,
-    ContentCardComponent],
+  imports: [FormsModule, RouterLink, MatFormFieldModule, MatInputModule, MatIconModule, MatButtonModule, ReactiveFormsModule, ContentCardComponent, ContentCardComponent],
   templateUrl: './itunes.component.html',
   styleUrl: './itunes.component.scss',
   standalone: true

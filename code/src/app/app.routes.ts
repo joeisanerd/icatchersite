@@ -10,6 +10,7 @@ import { PlayerComponent } from './player/player.component';
 import { EpisodeComponent } from './itunes/episode/episode.component';
 import { AboutComponent } from './about/about.component';
 import { ScreenshotCarouselComponent } from './screenshot-carousel/screenshot-carousel.component';
+import { HelpComponent } from './help/help.component';
 
 export const routes: Routes = [
     {
@@ -29,8 +30,11 @@ export const routes: Routes = [
         component: ContactMeComponent
     },
     {
-        path: 'faq',
-        component: FrequentlyAskedQuestionsComponent
+        path: 'help',
+        children: [
+            { path: '', component: HelpComponent },
+            { path: ':shortName', component: HelpComponent }
+        ]
     },
     {
         path: 'player',

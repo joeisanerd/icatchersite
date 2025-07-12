@@ -1,36 +1,40 @@
 
 <app-content-card>
 
-    <div *ngIf="record" class="podcast-card">
-        <div class="card-body">
-            <div class="card-title">
-                <h2>{{ record.collectionName }}</h2>
-                <h3 class="secondary-text">{{ record.artistName }}</h3>
-            </div>
-            <div class="card-text">
-                <div class="others">
-                    <a [href]="icatcherLink(record.collectionId)">
-                        <img style="max-width: 200px;" src="../../assets/Listen_on_iCatcher.png" alt="Listen in iCatcher" />
-                    </a>
-                </div> 
-            </div>  
+  @if (record) {
+    <div class="podcast-card">
+      <div class="card-body">
+        <div class="card-title">
+          <h2>{{ record.collectionName }}</h2>
+          <h3 class="secondary-text">{{ record.artistName }}</h3>
         </div>
-        <div *ngIf="record.artworkUrl600 != ''" class="card-image">
-            <img [src]="record.artworkUrl600" 
-                alt="{{ record.trackName }}" 
-                class="card-img-top rounded artwork clickable" 
-                />
+        <div class="card-text">
+          <div class="others">
+            <a [href]="icatcherLink(record.collectionId)">
+              <img style="max-width: 200px;" src="../../assets/Listen_on_iCatcher.png" alt="Listen in iCatcher" />
+            </a>
+          </div>
         </div>
-        <div class="card-body">
-            <div class="card-title">
-                <div>iTunesID: {{ record.collectionId }}</div>
-                <div><a [href]="record.feedUrl">Podcast Feed</a></div>
-            </div>
+      </div>
+      @if (record.artworkUrl600 != '') {
+        <div class="card-image">
+          <img [src]="record.artworkUrl600"
+            alt="{{ record.trackName }}"
+            class="card-img-top rounded artwork clickable"
+            />
         </div>
-    </div>        
+      }
+      <div class="card-body">
+        <div class="card-title">
+          <div>iTunesID: {{ record.collectionId }}</div>
+          <div><a [href]="record.feedUrl">Podcast Feed</a></div>
+        </div>
+      </div>
+    </div>
+  }
 
-<div class="bottom">
+  <div class="bottom">
     <br/>
     <button (click)="navigateToParent()" class="backButton" mat-stroked-button>Back to search</button>
-</div>
+  </div>
 </app-content-card>

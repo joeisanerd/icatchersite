@@ -1,0 +1,20 @@
+{
+    "appStoreLink": "https://itunes.apple.com/app/apple-store/id414419105?pt=10736&ct=MyWebsite&mt=8",
+    "title": "iCatcher! Podcast Player",
+    "description": "iCatcher! is a powerful podcast player for iOS devices.",
+    "icon": "AppIconRoundedIcon.png",
+    "pages": {
+        "home": {
+            "title": "Home",
+            "content": "Welcome to iCatcher! Podcast Player. Explore your favorite podcasts and enjoy seamless playback."
+        },
+        "settings": {
+            "title": "FAQ",
+            "content": "Help with common questions and issues related to iCatcher!."
+        },
+        "about": {
+            "title": "About",
+            "content": "Learn more about iCatcher! and its features."
+        }
+    }
+}

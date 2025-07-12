@@ -217,8 +217,8 @@ nav a.active {
     display: flex !important;
   }
 }
-::ng-deep .mat-mdc-menu-panel {
-  background: unset;
-  background-color: white !important;
-  border-radius: 8px !important;
-}
+// ::ng-deep .mat-mdc-menu-panel {
+//   background: unset;
+//   background-color: white !important;
+//   border-radius: 8px !important;
+// }

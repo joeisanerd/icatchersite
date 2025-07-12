@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ITunesSearchService } from '../services/i-tunes-search.service';
@@ -11,7 +11,7 @@ import { ContentCardComponent } from '../../content-card/content-card.component'
 
 @Component({
   selector: 'app-detail-for-id',
-  imports: [CommonModule, MatButtonModule, ContentCardComponent],
+  imports: [MatButtonModule, ContentCardComponent],
   templateUrl: './detail-for-id.component.html',
   styleUrl: './detail-for-id.component.scss',
   standalone: true

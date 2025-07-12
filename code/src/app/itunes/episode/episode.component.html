@@ -1,16 +1,18 @@
 
 <app-content-card>
-<div class="content" *ngIf="episode">
-    <div>
+  @if (episode) {
+    <div class="content">
+      <div>
         <h2>{{ record?.collectionName }}</h2>
         <h4>{{episode.trackName }}</h4>
         <img [src]="episode.artworkUrl600" alt="Episode Artwork" />
         <div>
-            <audio controls id="audioplayer">
-                <source [src]="episode.previewUrl" type="audio/mpeg">
-            </audio>
+          <audio controls id="audioplayer">
+            <source [src]="episode.previewUrl" type="audio/mpeg">
+          </audio>
         </div>
+      </div>
+      <br/>
     </div>
-    <br/>
-</div>
+  }
 </app-content-card>

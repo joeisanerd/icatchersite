@@ -1,9 +1,9 @@
-import { CommonModule } from '@angular/common';
+
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-content-card',
-  imports: [CommonModule],
+  imports: [],
   templateUrl: './content-card.component.html',
   styleUrl: './content-card.component.scss',
   standalone: true
