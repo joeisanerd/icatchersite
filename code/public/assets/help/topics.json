@@ -1,7 +1,17 @@
 [
     {
-        "title": "Creating a playlist",
+        "title": "Custom Playlists",
         "summary": "Learn how to create and manage playlists in iCatcher!",
-        "shortName": "creating-a-playlist"
+        "shortName": "custom-playlists"
+    },
+    {
+        "title": "Continuous Play (Back-to-Back)",
+        "summary": "play episodes continuously without stopping between episodes.",
+        "shortName": "backtobackplayback"
+    },
+    {
+        "title": "",
+        "summary": "",
+        "shortName": ""
     }
 ]
