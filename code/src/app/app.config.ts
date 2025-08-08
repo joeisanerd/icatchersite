@@ -8,7 +8,7 @@ import { provideMarkdown } from 'ngx-markdown';
 export const appConfig: ApplicationConfig = {
   providers: [
     provideZoneChangeDetection({ eventCoalescing: true }), 
-    provideRouter(routes, withComponentInputBinding()),
+    provideRouter(routes, withComponentInputBinding(), withHashLocation()),
     provideAnimations(),
     provideHttpClient(withFetch()),
     provideMarkdown()
