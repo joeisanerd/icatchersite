@@ -16,7 +16,7 @@ import { NewHomeComponent } from './new-home/new-home.component';
 export const routes: Routes = [
     {
         path: '',
-        component: HomeComponent
+        component: NewHomeComponent
     },
     {
         path: 'new-home',
