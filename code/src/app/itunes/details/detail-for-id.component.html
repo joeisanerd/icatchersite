@@ -14,6 +14,14 @@
               <img style="max-width: 200px;" src="../../assets/Listen_on_iCatcher.png" alt="Listen in iCatcher" />
             </a>
           </div>
+          <div class="icatcher-link-row">
+            <div class="icatcher-itunes-link">{{ icatcherLink(record.collectionId) }}
+            <button mat-icon-button (click)="copyToClipboard(icatcherLink(record.collectionId))" aria-label="Copy link">
+              <mat-icon>content_copy</mat-icon>
+            </button>
+            </div>
+          </div>
+          
         </div>
       </div>
       @if (record.artworkUrl600 != '') {
