@@ -11,11 +11,16 @@ import { EpisodeComponent } from './itunes/episode/episode.component';
 import { AboutComponent } from './about/about.component';
 import { ScreenshotCarouselComponent } from './screenshot-carousel/screenshot-carousel.component';
 import { HelpComponent } from './help/help.component';
+import { NewHomeComponent } from './new-home/new-home.component';
 
 export const routes: Routes = [
     {
         path: '',
         component: HomeComponent
+    },
+    {
+        path: 'new-home',
+        component: NewHomeComponent
     },
     {
         path: 'screenshots',

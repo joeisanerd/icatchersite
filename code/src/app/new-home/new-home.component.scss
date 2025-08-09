@@ -2,8 +2,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 80vh;
-//   background: linear-gradient(135deg, #e3f2fd 0%, #fff 100%);
+  min-height: 50vh;
+  padding: 2rem 0.5rem;
+    
 }
 
 .highlight-content {
@@ -13,6 +14,35 @@
   padding: 3rem 2rem;
   max-width: 420px;
   text-align: center;
+}
+
+@media (max-width: 700px) {
+  .highlight-container {
+    min-height: 50vh;
+    padding: 2rem 0.5rem;
+    align-items: unset;
+
+  }
+  .highlight-content {
+    padding: 1.2rem 0.5rem;
+    max-width: 100%;
+    border-radius: 16px;
+    box-shadow: none;
+  }
+  .app-icon {
+    width: 72px;
+    height: 72px;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  .store-link img {
+    width: 120px;
+  }
+  ul {
+    margin: 1rem 0 1.5rem 0;
+    font-size: 0.98rem;
+  }
 }
 
 .app-icon {
