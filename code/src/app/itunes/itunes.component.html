@@ -1,17 +1,19 @@
 <app-content-card>
   <div class="itunes">
-    <mat-form-field class="example-form-field" appearance="outline" >
-      <mat-label>Search iTunes</mat-label>
-      <input matInput title="Search field" type="text"
-        (change)="onSearch()"
-        [formControl]="searchTerm"
-        #searchInput>
-      @if (searchTerm) {
-        <button matSuffix mat-icon-button aria-label="Clear" (click)="clearSearch()">
-          <mat-icon>close</mat-icon>
-        </button>
-      }
-    </mat-form-field>
+    <div class="itunes-header">
+      <mat-form-field class="example-form-field" appearance="outline" >
+        <mat-label>Search iTunes</mat-label>
+        <input matInput title="Search field" type="text"
+          (change)="onSearch()"
+          [formControl]="searchTerm"
+          #searchInput>
+        @if (searchTerm) {
+          <button matSuffix mat-icon-button aria-label="Clear" (click)="clearSearch()">
+            <mat-icon>close</mat-icon>
+          </button>
+        }
+      </mat-form-field>
+    </div>
     @if (results.length > 0) {
       <div>
         <p>Found {{ results.length }} result(s)</p>

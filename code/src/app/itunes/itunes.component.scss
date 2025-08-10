@@ -64,3 +64,11 @@
   .clickable {
     cursor: pointer;
   }
+  .itunes-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    font-size: 1.5rem;
+    font-weight: 700;
+  }

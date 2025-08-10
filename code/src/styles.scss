@@ -44,7 +44,7 @@ header {
 }
 
   html {
-    color-scheme: light dark;
+    color-scheme: dark;
     @include mat.theme((
       color: (
         primary: mat.$blue-palette,
