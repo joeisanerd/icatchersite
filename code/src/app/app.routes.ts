@@ -12,6 +12,7 @@ import { AboutComponent } from './about/about.component';
 import { ScreenshotCarouselComponent } from './screenshot-carousel/screenshot-carousel.component';
 import { HelpComponent } from './help/help.component';
 import { NewHomeComponent } from './new-home/new-home.component';
+import { TesterpageComponent } from './testerpage/testerpage.component';
 
 export const routes: Routes = [
     {
@@ -21,6 +22,10 @@ export const routes: Routes = [
     {
         path: 'new-home',
         component: NewHomeComponent
+    },
+    {
+        path:'test',
+        component: TesterpageComponent
     },
     {
         path: 'screenshots',

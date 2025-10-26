@@ -18,3 +18,4 @@ Once you have a playlist created you can edit that playlist by tapping the i ico
 7. Specify individual downloaded or streaming episodes for the playlist.
 
 If you just want a playlist that includes all podcasts, then do not select any podcasts or exclude any podcasts or specify any keywords and it will use all of the podcasts available to make the playlist.
+

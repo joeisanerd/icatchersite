@@ -3,3 +3,7 @@
 .comma-list .item::after { content: ",\00a0"; /* comma + nbsp */ }
 .comma-list .item.no-comma::after { content: ""; }
 
+.comma-list {
+    display: flex;
+    flex-wrap: wrap;
+}
